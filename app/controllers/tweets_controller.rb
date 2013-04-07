@@ -10,6 +10,12 @@ class TweetsController < ApplicationController
     end
   end
 
+#JP new addition
+  def usertweets
+    @username = params[:username]
+    @tweets = Tweet.find_all_by_username(@username)
+  end
+
   # GET /tweets/1
   # GET /tweets/1.json
   def show

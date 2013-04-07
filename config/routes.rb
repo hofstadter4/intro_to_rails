@@ -7,6 +7,9 @@ IntroToRails::Application.routes.draw do
   get "demo/hello"
   get "demo/hello/:name" => "demo#hello"
 
+#JP new addition
+  get "account/:username" => "tweets#usertweets"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
